@@ -14,5 +14,6 @@ public class MainActivity extends AppCompatActivity {
         int sss = 10;
         String ttt = "멍멍";
         short s = 200;
+
     }
 }
