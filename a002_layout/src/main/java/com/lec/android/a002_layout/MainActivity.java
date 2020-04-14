@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.linear2);
 
         int sss = 10;
-        String ttt = "";
+        String ttt = "멍멍";
+        short s = 200;
     }
 }
