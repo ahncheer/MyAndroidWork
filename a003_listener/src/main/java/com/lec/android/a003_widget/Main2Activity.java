@@ -151,7 +151,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 }else {
                     result = num1 / num2;
                 }
-            } 
+            }
             num1 = result;
         }
         st.setText(Double.toString(result));
