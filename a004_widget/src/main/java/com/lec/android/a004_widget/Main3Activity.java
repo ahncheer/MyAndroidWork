@@ -23,11 +23,11 @@ public class Main3Activity extends AppCompatActivity {
         cb2 = findViewById(R.id.cb2);
         cb3 = findViewById(R.id.cb3);
         cb4 = findViewById(R.id.cb4);
-
         tvResult = findViewById(R.id.tvResult);
+
         Button btnComplete = findViewById(R.id.btnComplete);
 
-        //버튼을 클릭하면 체크된 내용들만 결과 출력하기
+        // 버튼을 클릭하면 체크된 내용들만 결과 출력하기
         btnComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,18 +36,22 @@ public class Main3Activity extends AppCompatActivity {
                 if(cb2.isChecked()) result += cb2.getText();
                 if(cb3.isChecked()) result += cb3.getText();
                 if(cb4.isChecked()) result += cb4.getText();
+                tvResult.setText("선택결과: " + result);
             }
         });
+
         cb1.setOnCheckedChangeListener(new CbListener());
         cb2.setOnCheckedChangeListener(new CbListener());
         cb3.setOnCheckedChangeListener(new CbListener());
         cb4.setOnCheckedChangeListener(new CbListener());
 
-    }// end onCreate
+    } // end onCreate()
+
 
     class CbListener implements CompoundButton.OnCheckedChangeListener{
-        // CheckBox의 상태가 변할때마가 호출되는 메서드
-        // is checked : true <- 체크된 상태, false <- uncheck 상태
+
+        // CheckBox 의 '상태'가 변할때마다 호출되는 메소드
+        // isChecked : true <- check 상태,  false <- uncheck 상태
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             int count = 0;
@@ -55,10 +59,29 @@ public class Main3Activity extends AppCompatActivity {
             if(cb2.isChecked()) count++;
             if(cb3.isChecked()) count++;
             if(cb4.isChecked()) count++;
-
             tvResult.setText(count + "개 선택");
         }
     }
 
 
-}
+
+
+} // end Activity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -23,7 +23,7 @@ public class Main4Activity extends AppCompatActivity {
         // 체크박스와는 달리
         // RadioButton 은 각각 선언하는 것이 아니라 RadioGroup 으로 선언하여 사용
 
-        rg = findViewById(R.id.rgroup1);
+        rg = findViewById(R.id.rg);
         btnResult = findViewById(R.id.btnResult);
         tvResult = findViewById(R.id.tvResult);
 
@@ -55,6 +55,14 @@ public class Main4Activity extends AppCompatActivity {
     } // end onCreate()
 
 } // end Activity
+
+
+
+
+
+
+
+
 
 
 

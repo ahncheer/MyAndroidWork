@@ -14,15 +14,12 @@
         android:text="CheckBox"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
 
-
     <CheckBox
         android:id="@+id/cb1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="딸기"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-
-    ></CheckBox>
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
     <CheckBox
         android:id="@+id/cb2"
@@ -33,14 +30,14 @@
 
     <CheckBox
         android:id="@+id/cb3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="키위"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <CheckBox
         android:id="@+id/cb4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="바나나"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
@@ -57,6 +54,7 @@
         android:layout_height="wrap_content"
         android:text="선택결과"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
 
 </LinearLayout>
 

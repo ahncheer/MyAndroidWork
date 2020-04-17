@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
     EditText etName, etPassword, etNumber, etEmail;
     TextView tvName, tvPassword, tvNumber, tvEmail;
     TextView tvResult;
@@ -31,40 +32,46 @@ public class MainActivity extends AppCompatActivity {
 
         tvResult = findViewById(R.id.tvResult);
 
-        // focus 변화
-        etName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            //hasFocus : true - 포커스 받은 경우 flase - 포커스 잃은 경우
 
+        // 포커스 변화
+        etName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            // hasFocus: true-포커스 받은 경우 false - 포커스 잃은 경우
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    ((EditText) v).setBackgroundColor(Color.YELLOW);
+                if(hasFocus){
+                    ((EditText)v).setBackgroundColor(Color.YELLOW);
                 } else {
-                    ((EditText) v).setBackgroundColor(Color.parseColor("#00000000"));
+                    // 투명색
+                    ((EditText)v).setBackgroundColor(Color.parseColor("#00000000"));
                 }
             }
         });
 
-        //키보드가 눌릴때
-        //자판 눌릴떄만 반응!
+        // 키보드가 눌릴때
+        // 자판 키보드에만 반응 !
         etPassword.setOnKeyListener(new View.OnKeyListener() {
+            // keyCode : 눌린 키의 코드값
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                tvResult.setText(((EditText) v).getText().toString());
+                tvResult.setText(  ((EditText)v).getText().toString() );
                 return false;
             }
         });
 
-        //값의 변화 (입력완료)
+        // 값의 변화 (입력 완료)
         etEmail.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                tvResult.setText("입력완료 : " + actionId);
+                tvResult.setText("입력완료:" + actionId);
                 return false;
             }
         });
 
 
+    } // end onCreate()
+
+
+} // end Activity
 
 
 
@@ -75,16 +82,3 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    }
-}

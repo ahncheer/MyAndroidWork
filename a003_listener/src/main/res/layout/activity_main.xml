@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnClear"
+            android:id="@+id/btn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -22,14 +22,14 @@
             android:text="Button1" />
 
         <Button
-            android:id="@+id/btn0"
+            android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Button2" />
 
         <Button
-            android:id="@+id/btnEqual"
+            android:id="@+id/btn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -37,13 +37,11 @@
     </LinearLayout>
 
     <TextView
-
         android:id="@+id/tvResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="결과창"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20dp"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TableLayout
         android:layout_width="match_parent"

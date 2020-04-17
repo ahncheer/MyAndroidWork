@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn1 = findViewById(R.id.btnClear);
-        Button btn2 = findViewById(R.id.btn0);
-        Button btn3 = findViewById(R.id.btnEqual);
+        Button btn1 = findViewById(R.id.btn1);
+        Button btn2 = findViewById(R.id.btn2);
+        Button btn3 = findViewById(R.id.btn3);
 
         tvResult = findViewById(R.id.tvResult);
         et = findViewById(R.id.et);
         final LinearLayout ll = findViewById(R.id.ll);   // Local inner 에서 사용할수 있는 것은
-        // 멤버변수, effective final !!
+                                                        // 멤버변수, effective final !!
 
         // 방법2 : 익명 클래스 (anonymous class) 사용.
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -102,22 +102,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 연습
         // +, - 버튼 누르면 tvResult 의 글씨가 점점 커지고/작아지게 하기
         // getTextSize() : float 값 리턴
-        // TODO
         Button btnInc = findViewById(R.id.btnInc);
-        btnInc.setOnClickListener((v) -> {    // onClick(View v)
-            float a = tvResult.getTextSize() + 2;
-            tvResult.setTextSize(0, a);
-            Log.d("myapp", "버튼+ 가 클릭 되었다");
-            tvResult.setText("버튼+ 클릭됨, " + a);
+        Button btnDec = findViewById(R.id.btnDec);
+
+        btnInc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float size = tvResult.getTextSize();
+                Log.d("myapp", "글꼴사이즈: " + size);
+                tvResult.setTextSize(0, size + 5);
+            }
         });
 
-        Button btnDec = findViewById(R.id.btnDec);
-        btnDec.setOnClickListener((v) -> {    // onClick(View v)
-            float b = tvResult.getTextSize() - 2;
-            tvResult.setTextSize(0, b);
-            Log.d("myapp", "버튼- 가 클릭 되었다");
-            tvResult.setText("버튼- 클릭됨, " + b);
+        btnDec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float size = tvResult.getTextSize();
+                Log.d("myapp", "글꼴사이즈: " + size);
+                tvResult.setTextSize(0, size - 5);
+            }
         });
+
+
+
+
 
     } // end onCreate()
 
