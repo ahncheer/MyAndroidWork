@@ -11,11 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     ProfileAdapter adapter;  // Adapter 객체
     RecyclerView rv;
+    Button btnInsert;
+    EditText etName, etAge, etAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,39 +33,45 @@ public class MainActivity extends AppCompatActivity {
 
         // Adapter객체 생성
         adapter = new ProfileAdapter();
-
         initAdapter(adapter);
-
         rv.setAdapter(adapter);   // RecyclerView 에 Adapter 장착!
-
         Button btnInsert = findViewById(R.id.btnInsert);
-
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 insertData(v);
             }
         });
+        etName = findViewById(R.id.etName);
+        etAge = findViewById(R.id.etAge);
+        etAdd = findViewById(R.id.etAdd);
+
+
+
+
+
+
 
 
     } // end onCreate()
 
-
-
     // 샘플데이터 가져오기
     protected void initAdapter(ProfileAdapter adapter){
         // 몇개만 생성
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 2; i++){
             int idx = ProfileList.next();
             adapter.addItem(new Profile(ProfileList.NAME[idx], ProfileList.etAge[idx], ProfileList.etAdd[idx]));
         }
     }
 
-
     protected void insertData(View v){
         int idx = ProfileList.next();
         //리스트 맨ㅇ앞에 추가 !
-        adapter.addItem(0, new Profile(ProfileList.NAME[idx], ProfileList.etAge[idx], ProfileList.etAdd[idx]));
+        String name = etName.getText().toString();
+        String age =  etAge.getText().toString();
+        String address = etName.getText().toString();
+
+        adapter.addItem(0, new Profile(name, age, address));
         adapter.notifyDataSetChanged(); //중요하다 중요해 꼭 적용하기!
         //데이터 변경을 Adapter에 알리고, 리스트뷰에 반영
 
