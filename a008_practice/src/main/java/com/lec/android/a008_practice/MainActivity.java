@@ -7,8 +7,6 @@ import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(0, new Profile(name, age, address));
         adapter.notifyDataSetChanged(); //중요하다 중요해 꼭 적용하기!
         //데이터 변경을 Adapter에 알리고, 리스트뷰에 반영
+
+        etName.setText(" ");
+        etAge.setText(" ");
+        etAdd.setText(" ");
 
     }
 

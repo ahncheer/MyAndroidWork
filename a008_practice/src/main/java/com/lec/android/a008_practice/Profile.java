@@ -1,6 +1,7 @@
 package com.lec.android.a008_practice;
+import java.io.Serializable;
 
-public class Profile {
+public class Profile implements  Serializable{
     String name;
     String age;
     String address;

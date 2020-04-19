@@ -4,25 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1DFFFFFF"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="5dp"
+        android:background="#E7FFF9C4"
+        android:backgroundTint="#8CFFF9C4">
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/nameText"
-                android:layout_width="wrap_content"
+                android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="이름 : " />
+                android:text="이름 : "
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/etName"
@@ -30,21 +33,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
-               />
-        </LinearLayout>
+                android:inputType="textPersonName" />
+        </TableRow>
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/ageText"
-                android:layout_width="wrap_content"
+                android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="나이 : " />
+                android:text="나이 : "
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/etAge"
@@ -52,22 +54,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="number"
-                 />
+                android:inputType="number" />
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/addText"
-                android:layout_width="wrap_content"
+                android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="주소 : " />
+                android:text="주소 : "
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/etAdd"
@@ -77,18 +77,23 @@
                 android:ems="10"
                 android:inputType="text"
                 android:text="" />
+        </TableRow>
 
-        </LinearLayout>
-    </LinearLayout>
+    </TableLayout>
 
     <Button
         android:id="@+id/btnInsert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:background="#B2EBF2"
+        android:backgroundTint="#DBFBFF"
+        android:text="입력"
+        android:textSize="24sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="5dp" />
 </LinearLayout>
