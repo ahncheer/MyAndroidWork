@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     ProfileAdapter adapter;  // Adapter 객체
     RecyclerView rv;
-    Button btnInsert;
     EditText etName, etAge, etAdd;
 
     @Override
@@ -26,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         rv = findViewById(R.id.rv);
+        etName = findViewById(R.id.etName);
+        etAge = findViewById(R.id.etAge);
+        etAdd = findViewById(R.id.etAdd);
 
         // RecyclerView 를 사용하기 위해서는 LayoutManager 지정해주어야 한다.
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -42,15 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 insertData(v);
             }
         });
-        etName = findViewById(R.id.etName);
-        etAge = findViewById(R.id.etAge);
-        etAdd = findViewById(R.id.etAdd);
-
-
-
-
-
-
 
 
     } // end onCreate()
@@ -69,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         //리스트 맨ㅇ앞에 추가 !
         String name = etName.getText().toString();
         String age =  etAge.getText().toString();
-        String address = etName.getText().toString();
+        String address = etAdd.getText().toString();
 
         adapter.addItem(0, new Profile(name, age, address));
         adapter.notifyDataSetChanged(); //중요하다 중요해 꼭 적용하기!
