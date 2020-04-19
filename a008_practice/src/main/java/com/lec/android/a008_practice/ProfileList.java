@@ -6,8 +6,8 @@ public class ProfileList {
     };
 
 
-    public static int [] etAge = {
-          11, 22, 33
+    public static String [] etAge = {
+          "11", "22", "33"
     };
 
 

@@ -1,6 +1,7 @@
 package com.lec.android.a008_practice;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -107,19 +108,20 @@ import java.util.List;
 
     // 클릭리스너 장착
 
-                itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        int position = getAdapterPosition();
-                        //Toast.makeText(v.getContext(), "position : " + position, Toast.LENGTH_LONG).show();
+//                itemView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        int position = getAdapterPosition();
+//                        //Toast.makeText(v.getContext(), "position : " + position, Toast.LENGTH_LONG).show();
+//
+//                        //  아이템을 클릭하면 해당 세부 정보 액티비티로 넘겨주기
+//                        Intent intent = new Intent(v.getContext(), ProfileDetail.class);
+//                        intent.putExtra("pf", (Parcelable) adapter.getItem(position));
+//
+//                        v.getContext().startActivity(intent);
+//                    }
+//                });
 
-                        //  아이템을 클릭하면 해당 세부 정보 액티비티로 넘겨주기
-                        Intent intent = new Intent(v.getContext(), ProfileDetail.class);
-                        intent.putExtra("pf", adapter.getItem(position));
-
-                        v.getContext().startActivity(intent);
-                    }
-                });
 
 
 
