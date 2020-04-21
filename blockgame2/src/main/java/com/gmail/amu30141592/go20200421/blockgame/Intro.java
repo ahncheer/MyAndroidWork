@@ -1,12 +1,12 @@
 package com.gmail.amu30141592.go20200421.blockgame;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 // 현재 화면이 가로/세로 변경되지 않도록 지정하기
 // AndroidManifest.xml 에 screenOrientation="portrait" 지정
 
