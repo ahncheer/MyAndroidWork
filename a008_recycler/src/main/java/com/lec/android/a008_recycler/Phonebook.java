@@ -9,7 +9,6 @@ public class Phonebook implements Serializable {
     String phone; // 전화번호
     String email; // 이메일
 
-    // 제맘 알죠?
     public Phonebook() {
     }
 

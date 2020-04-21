@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PhonebookDetail extends AppCompatActivity {
+
     ImageView ivPhoto;
     TextView tvName, tvPhone, tvEmail;
 
@@ -23,7 +24,7 @@ public class PhonebookDetail extends AppCompatActivity {
         tvEmail = findViewById(R.id.tvEmail);
         tvPhone = findViewById(R.id.tvPhone);
 
-        Intent intent  = getIntent();
+        Intent intent = getIntent();
         Phonebook pb = (Phonebook)intent.getSerializableExtra("pb");
         ivPhoto.setImageResource(pb.getPhoto());
         tvName.setText(pb.getName());
@@ -34,13 +35,20 @@ public class PhonebookDetail extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //리스트로 돌아가기
+                // 리스트로 돌아가기
                 finish();
             }
         });
+    }
+}
 
 
 
 
-    }// end onCreate
-}// end PhonebookDetail
+
+
+
+
+
+
+
