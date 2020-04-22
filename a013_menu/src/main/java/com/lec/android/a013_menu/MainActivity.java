@@ -89,24 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
         showInfo(item);
 
-        //#2 특적 메뉴아이템에 대한 동작
-        //각 색상이 눌렸을 때
-
-        switch (item.getItemId()){
-            case MENUITEM_YELLOW:
-    ll.setBackgroundResource(R.color.bgColorYellow);
-                break;
-            case MENUITEM_ORANGE:
-                ll.setBackgroundResource(R.color.bgColorOrange);
-
-                break;
-            case MENUITEM_CYAN:
-                ll.setBackgroundResource(R.color.bgColorCyan);
-
-                break;
-
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -125,50 +107,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 } // end Activity
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
