@@ -1,8 +1,5 @@
 package com.lec.android.a013_menu;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 /* ContextMenu - 뷰 객체를 롱클릭했을 때 나오는 메뉴
     PC 에서 마우스 우클릭으로 부가정보들을 제공하는 방법을
@@ -49,8 +49,8 @@ public class Main2Activity extends AppCompatActivity {
             case R.id.tvCtxMenu:
 
                 menu.setHeaderTitle("색상을 선택하세요")
-                //.setHeaderIcon(R.drawable.face01);
-                ;
+                    //.setHeaderIcon(R.drawable.face01);
+                    ;
                 menu.add(0, 1, 100, "빨강");
                 menu.add(0, 2, 100, "녹색");
                 menu.add(0, 3, 100, "파랑");
@@ -72,43 +72,41 @@ public class Main2Activity extends AppCompatActivity {
     // ContextMenu 의 메뉴아이템 항목을 선택(클릭) 했을 때 호출
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-        Log.d("myapp", "onContextItemSelected");
+        Log.d("myapp", "onContextItemSelected()");
         showInfo(item);
 
-        int id = item.getItemId();
-        int groupId = item.getGroupId();
+        int id = item.getItemId();   // 메뉴아이템의 id값
+        int groupId = item.getGroupId();   // 메뉴아이템의 그룹아이디 값
 
         switch(groupId){
-            case 0 :
-                switch(id){
-                    case 1 : //빨강
+            case 0:
+                switch (id){
+                    case 1 : // 빨강
                         tvCtxMenu.setTextColor(Color.RED);
-                        return  true;
-                    case 2 : //녹색
+                        return true;
+                    case 2 : // 녹색
                         tvCtxMenu.setTextColor(Color.GREEN);
-                        return  true;
-                    case 3 : //파랑
+                        return true;
+                    case 3 : // 파랑
                         tvCtxMenu.setTextColor(Color.BLUE);
-                        return  true;
+                        return true;
                 }
                 break;
+
             case 1:
                 switch(id){
-                    case 1 : //아이언맨
+                    case 1 :
                         ivCtxMenu.setImageResource(R.drawable.face01);
-                        return  true;
-                    case 2 : //캡틴
+                        return true;
+                    case 2:
                         ivCtxMenu.setImageResource(R.drawable.face02);
-                        return  true;
-                    case 3 : //헐크
+                        return true;
+                    case 3:
                         ivCtxMenu.setImageResource(R.drawable.face03);
-                        return  true;
+                        return true;
                 }
                 break;
-
-
-        }
-
+        } // end switch
 
 
         return super.onContextItemSelected(item);

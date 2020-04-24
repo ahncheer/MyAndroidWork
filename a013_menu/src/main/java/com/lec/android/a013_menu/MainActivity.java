@@ -1,14 +1,14 @@
 package com.lec.android.a013_menu;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 /*  안드로이드의 메뉴
     1. Option Menu :  '메뉴' 버튼을 눌렀을때 나타나는 메뉴
@@ -107,6 +107,50 @@ public class MainActivity extends AppCompatActivity {
 
 
 } // end Activity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
