@@ -1,7 +1,5 @@
 package com.lec.android.a015_web;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +10,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 // #1 WebView 사용하여 웹 페이지 보여주기
 // #2 묵시적 Intent 사용하여 웹 브라우져 띄우기

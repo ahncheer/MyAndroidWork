@@ -1,7 +1,5 @@
 package com.lec.android.a015_web;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -93,9 +93,7 @@ public class Main3Activity extends AppCompatActivity {
         btnParse = findViewById(R.id.btnParse);
         et = findViewById(R.id.editText);
 
-//        api_key = getResources().getString(R.string.api_key);
-        api_key = "5347494a6a61686e3936487a696174";
-
+        api_key = getResources().getString(R.string.api_key);
 
         try {
             // DOM parser 객체 생성

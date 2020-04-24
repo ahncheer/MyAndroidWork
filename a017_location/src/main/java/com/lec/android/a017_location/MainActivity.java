@@ -1,11 +1,11 @@
 package com.lec.android.a017_location;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
@@ -31,12 +31,10 @@ import java.util.List;
  *             추가적인 배터리 소모가 가장 적다.
  *
  */
-
-
-
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvResult ;
+    TextView tvResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
         tvResult = findViewById(R.id.tvResult);
 
-        //위치관리자 객체 얻어오기
-        LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        // 위치관리자 객체 얻어오기
+        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 
-         //모든 가용한 위치 제공자 가져오기
-        List<String> list = lm.getAllProviders();
-        String str = "[위치제공자] : 사용가능 여부 \n ---------------------- \n";
+        List<String> list = lm.getAllProviders();   // 모든 가용한 위치 제공자 가져오기
+
+        String str = "[위치제공자] : 사용가능여부\n----------------------------\n";
         for(String provider : list){
             str += "[" + provider + "] : " + lm.isProviderEnabled(provider) + "\n";
         }
@@ -57,8 +55,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
-}
+    } // end onCreate()
+
+
+} // end Activity
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
